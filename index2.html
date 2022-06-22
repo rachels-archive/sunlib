@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Slick library -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles2.css">
+    <title>Sunway Library</title>
+  </head>
+
+  <body>
+    <!-- Header section-->
+    <header>
+        <div class="header-top">
+          <img src="assets/images/uni-logo.png" class="logo">
+          <div class="header-logo">
+            <h1 class="navbar-brand">Sunway Campus Library</h1>
+            <image class="header-logo-image" src="assets/images/logo.png"></image>
+          </div>
+        </div>
+        <div class="main-navigation sticky-top">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="navbar-toggle-icon fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#resources-services-section">Services and Resources</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item active">     
+                <i class="fa-solid fa-circle-user"></i>
+                <a href="#">Loan Account</a>
+              </li>
+            </ul>
+          </div>
+          </nav>
+        </div>
+    </header>
+        
+    <!-- Search Bar and Main Links-->
+    <section class="search-box">
+      <div class="container">
+        <!-- Libraian Widget -->
+        <div class="widget">
+          <a href="#" class="ask-us">
+            <img src="assets/images/widget.png">
+          </a>
+        </div>
+        <div class="search-container">
+          <div class="title-container">
+            <h2 class="search-container-title">
+              Library Search
+            </h2>
+          </div>
+          <div class="search-container-box">
+            <ul id="search-tabs" class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#" role="tab" data-toggle="tab">Articles</a></li>
+              <li role="presentation" class=""><a href="#" role="tab" data-toggle="tab">E-Journals</a></li>
+              <li role="presentation" class=""><a href="#" role="tab" data-toggle="tab">Ebooks</a></li>
+              <li role="presentation" class=""><a href="#" role="tab" data-toggle="tab">Books & Audiobooks</a></li>
+	            <li role="presentation" class=""><a href="#" role="tab" data-toggle="tab">Repository</a></li>
+	            <li role="presentation" class=""><a href="#" role="tab" data-toggle="tab">Databases A-Z</a></li>
+              <li role="presentation" class=""><a href="#" role="tab" data-toggle="tab">E-Reserves</a></li>
+            </ul>
+          </div>
+          <label for="hpsearch-select" class="sr-only">Select search type</label>
+          <select id="hpsearch-select">
+            <option value="#general" id="general-option">General</option>
+            <option value="#articles" id="articles-option">Articles</option>
+            <option value="#booksandmedia" id="booksandmedia-option">Books and Media</option>
+            <option value="#ebooks" id="ebooks-option">Ebooks</option>
+            <option value="#journals" id="journals-option">Journals A-Z</option>
+            <option value="#databases" id="databases-option">Databases A-Z</option>
+          </select>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="general" aria-hidden="false" tabindex="0">
+              <form action="">
+                <div class="input-group mb-4">
+                  <input type="search" placeholder="Type search here" aria-describedby="button-addon5" class="form-control">
+                  <div class="input-group-append">
+                    <button id="button-addon5" type="submit" class="btn"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <ul class="search-filter-options">
+              <li>
+                <input type="radio" name="filter-option" id="search-option1">
+                <label for="search-option1">Keyword</label>
+              </li>
+              <li>
+                <input type="radio" name="filter-option" id="search-option2">
+                <label for="search-option2">Author</label>
+              </li>
+              <li>
+                <input type="radio" name="filter-option" id="search-option3">
+                <label for="search-option3">Title</label>
+              </li>
+            </ul>
+          </div>
+          <br>
+          <div class="search-area">
+            <button class="btn" id="search-bar-button">
+              <span class="search-icon-container">
+                <i class="fas fa-search"></i>
+                Search
+              </span>
+            </button>
+            <ul class="list-inline list-unstyle">
+              <li class="adv-srch-lnk"><a href="#">Advanced Search</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="search-links">
+          <ul class="row">
+            <li class="link-item">
+              <i class="fa-regular fa-clock"></i>
+              <a href="#">Opening Hours</a>
+            </li>
+            <li class="link-item">
+              <i class="fa-regular fa-calendar"></i>
+              <a href="#">Bookings</a>
+            </li>
+            <li class="link-item">
+              <i class="fa-solid fa-computer"></i>
+              <a href="#">Facilities</a>
+            </li>
+            <li class="link-item">
+              <i class="fa-solid fa-book"></i>
+              <a href="#">Collections</a>
+            </li>
+          </ul>
+        </div>
+      </div>        
+    </section>
+    
+     <!-- Services and Resources -->
+     <section class="resources-services" id="resources-services-section">
+      <h3 class="section-title">Resources and Services</h3>
+        <div class="container information-container">
+          <div class="row">
+            <div class="col col-lg-3 col-md-6">
+              <div class="btn-link">
+                <a href="#">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <h5 class="information-label">Students</h5>
+                </a>
+              </div>
+            </div>
+            <div class="col col-lg-3 col-md-6">
+              <div class="btn-link">
+              <a href="#">
+              <i class="fa-solid fa-user-graduate"></i>
+              <h5 class="information-label">Postgraduates</h5>
+              </a>
+            </div>
+            </div>
+            <div class="col col-lg-3 col-md-6">
+              <div class="btn-link">
+              <a href="#">
+              <i class="fa-solid fa-building-columns"></i>
+              <h5 class="information-label">Academics</h5>
+              </a>
+            </div>
+            </div>
+            <div class="col col-lg-3 col-md-6">
+              <div class="btn-link">
+              <a href="#">
+              <i class="fa-solid fa-file-pen"></i>
+              <h5 class="information-label">Research</h5>
+              </a>
+            </div>
+            </div>
+          </div>
+          <div class="container resources-services-container">
+            <div class="row">
+              <div class="col col-lg-6">
+                <div class="card">
+                  <img class="card-img-top" src="assets/images/services.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title">Services</h4>
+                    <p class="card-text">
+                      <ul>
+                        <li>
+                          <a href="#">Academic Languages Learning Services</a>
+                        </li>
+                        <li>
+                          <a href="#">Document Delivery (DocDel)</a>
+                        </li>
+                        <li>
+                          <a href="#">Membership</a>
+                        </li>
+                        <li>
+                          <a href="#">Consultations</a>
+                        </li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col col-lg-6">
+                <div class="card">
+                  <img class="card-img-top" src="assets/images/resources.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h4 class="card-title">Resources</h4>
+                    <p class="card-text">
+                      <ul>
+                        <li>
+                          <a href="#">Open Source</a>
+                        </li>
+                        <li>
+                          <a href="#">Statistical Websites</a>
+                        </li>
+                        <li>
+                          <a href="#">Past Year Exam Papers</a>
+                        </li>
+                        <li>
+                          <a href="#">Online Newspapers</a>
+                        </li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- News and Announcements -->
+    <section class="news-section">
+      <h3 class="section-title">News and Announcements</h3>
+        <div class="container news-container">
+          <div class="card news-item">
+            <div class="card-body">
+              <h5 class="card-title">Important notices for new students</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Click for more information</a>
+            </div>
+          </div>  
+          <div class="card news-item">
+            <div class="card-body">
+              <h5 class="card-title">ALLS workshops available for 2022</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Click for more information</a>
+            </div>
+          </div>  
+          <div class="card news-item">
+            <div class="card-body">
+              <h5 class="card-title">Individual consulation available for postgraduates</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Click for more information</a>
+            </div>
+          </div>  
+        </div>
+    </section>
+
+    <!-- Information about the Library -->
+    <section class="info-section">
+      <h3 class="section-title">Explore the Library</h3>
+      <div class="container">
+          <div class="library-services row text-center">
+            <div class="library-service-item card col-lg-4">
+              <img class="card-img-top" src="assets/images/lib1.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Library Tour</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+            <div class="library-service-item card col-lg-4">
+              <img class="card-img-top" src="assets/images/lib2.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Library Guides</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+            <div class="library-service-item card col-lg-4">
+              <img class="card-img-top" src="assets/images/lib3.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Video Tutorials</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">View more</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- New Titles -->
+    <section class="new-titles-section">
+      <h3 class="section-title">New Titles</h3>
+      <div class="container">
+        <div class="new-titles-list">
+          <img class="new-title-image" src="assets/images/book1.jpg">
+          <img class="new-title-image" src="assets/images/book2.jpg">
+          <img class="new-title-image" src="assets/images/book3.jpg">
+          <img class="new-title-image" src="assets/images/book4.jpg">
+          <img class="new-title-image" src="assets/images/book5.jpg">
+          <img class="new-title-image" src="assets/images/book6.jpg">
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="footer-col col-lg-3 col-md-6">
+            <h5 class="footer-title">Contact Us</h5>
+            <ul class="footer-link">
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="#">library@sunway.edu.my </a>
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <a href="#">603-74918750 </a>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#">Sunway Campus Library, No.5 Jalan Universiti, Sunway City, 47500, Selangor Darul Ehsan. </a>
+              </li>
+              <li>
+                <i class="fa-brands fa-facebook"></i>
+                <a href="#">Sunway Campus Library</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col col-lg-3 col-md-6">
+            <h5 class="footer-title">Other Services</h5>
+            <ul class="footer-link">
+              <li><a href="#">Renew Loans</a></li>
+              <li><a href="#">Endnote Workshop</a></li>
+              <li><a href="#">Information Skills Session</a></li>
+            </ul>
+          </div>
+          <div class="footer-col col-lg-3 col-md-6 col-sm-12">
+            <h5 class="footer-title">Other Resources</h5>
+            <ul class="footer-link">
+              <li><a href="#">Academic Databases</a></li>
+              <li><a href="#">Endnote Installation</a></li>
+              <li><a href="#">Lean Library Installation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col col-lg-3 col-md-6">
+            <h5 class="footer-title">Other Links</h5>
+            <ul class="footer-link">
+              <li><a href="#">Find It Fast</a></li>
+              <li><a href="#">Rules & Regulations</a></li>
+              <li><a href="#">Donations</a></li>
+              <li><a href="#">Staff Intranet</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <img src="assets/images/logo_sirim.png" alt="" class="footer-logo">
+          <p>© Copyright 2020 - Sunway Campus Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery first, then Popper.js, Bootstrap JS, custom JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/scripts.js"></script> 
+  </body>
+</html>
