@@ -6,6 +6,7 @@ a {
 body,
 .info-section .card{
   background-color:#f8f9fa; 
+  position: relative;
 }
 
 body {
@@ -180,9 +181,16 @@ section.search-box {
     background-image: url("https://apicms.thestar.com.my/uploads/images/2022/02/15/1481517.jpg");
     background-size: cover;
     position: relative;
-    top: 126px;
     transition: top 0.5s;
 }
+
+#main-body{
+  position: absolute;
+  top: 126px;
+  width: 100%;
+  transition: top 0.5s;
+}
+
 
 .search-box .widget img{
   width: 60px;
@@ -670,3 +678,4 @@ footer .footer-bottom p {
   font-size: 0.8rem;
   margin: 0;
 }
+
