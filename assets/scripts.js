@@ -36,33 +36,14 @@ $(document).ready(function(){
           }
         ]
     });
-
-    /*
-    var lastScrollTop = 0;
-
-    navbar = document.getElementById("page-header");
-    
-
-    window.addEventListener("scroll", function() {
-      var scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop) {
-        navbar.style.top = "-126px";
-        pageBody.style.top = "0px";
-      } else {
-        navbar.style.top = "0px";
-        pageBody.style.top = "126px";
-      }
-    })
-    */
-
-
     pageBody = document.getElementById("main-body");
 
 
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
+    
+    if ($(window).width() > 576) {
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("page-header").style.top = "0";
         pageBody.style.top = "126px";
@@ -70,9 +51,19 @@ $(document).ready(function(){
         document.getElementById("page-header").style.top = "-126px";
         pageBody.style.top = "0px";
       }
+    } else {
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("page-header").style.top = "0";
+        pageBody.style.top = "152px";
+      } else {
+        document.getElementById("page-header").style.top = "-152px";
+        pageBody.style.top = "0px";
+      }
+    }
+
       prevScrollpos = currentScrollPos;
     }
 
-});
+  });
 
 });
