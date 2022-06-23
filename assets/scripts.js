@@ -36,6 +36,8 @@ $(document).ready(function(){
           }
         ]
     });
+
+
     pageBody = document.getElementById("main-body");
 
 
@@ -65,6 +67,6 @@ $(document).ready(function(){
     }
   }
 
-  });
+});
 
 });
