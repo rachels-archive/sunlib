@@ -40,6 +40,7 @@ $(document).ready(function(){
 
 
     var prevScrollpos = window.pageYOffset;
+    while (window.scrollY > 0){
     window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     
@@ -60,9 +61,9 @@ $(document).ready(function(){
         pageBody.style.top = "0px";
       }
     }
-
       prevScrollpos = currentScrollPos;
     }
+  }
 
   });
 
