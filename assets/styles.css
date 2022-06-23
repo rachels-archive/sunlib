@@ -37,10 +37,17 @@ ul {
   list-style: none;
 }
 
+
 /*----------------header------------------*/
-header {
-  display: unset;
+#page-header {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  top: 0;
+  transition: top 0.5s;
+  height: 126px;
 }
+
 header .header-top {
   display: flex;
   align-items: center;
@@ -84,12 +91,6 @@ header .header-top .header-logo img {
 }
 
 /*----------------navigation menu------------------*/
-.main-navigation {
-  position: sticky;
-  top: 0;
-  z-index: 1020;
-}
-
 .main-navigation a {
 font-weight: 500;
 text-decoration: none;
@@ -174,11 +175,13 @@ color: #003572;
 /*----------------search box------------------*/
 section.search-box {
     height: calc(100vh - 126px); 
-    min-height: 560px;
-    padding-top: 50px;
+    min-height: 580px;
+    padding-top: 70px;
     background-image: url("https://apicms.thestar.com.my/uploads/images/2022/02/15/1481517.jpg");
     background-size: cover;
     position: relative;
+    top: 126px;
+    transition: top 0.5s;
 }
 
 .search-box .widget img{
@@ -331,8 +334,8 @@ section.search-box {
 }
 
 @media (max-width: 992px){
-  .search-box{
-    padding: 15px;
+  section.search-box{
+    padding: 20px;
   }
 
   .search-box select#hpsearch-select {
@@ -378,8 +381,8 @@ section.search-box {
 }
 
 @media screen and (max-width: 576px) {
-  .search-box {
-    padding: 30px 0;
+  section.search-box {
+    padding: 40px 0;
   }
 
   .search-box .search-links li{
@@ -440,7 +443,6 @@ section.search-box {
 .resources-services .information-container .col {
   text-align: center;
   padding: 20px;
- 
 }
 
 .resources-services .information-container .btn-link {
