@@ -1,8 +1,5 @@
 jQuery(function($) {
-
 $(document).ready(function(){
-
-
     $('.news-section .news-container').slick({
         slidesToShow: 1,
         arrows:true,
@@ -36,7 +33,23 @@ $(document).ready(function(){
           }
         ]
     });
-   
-  });
 
+    var lastScrollTop = 0;
+
+    navbar = document.getElementById("page-header");
+    pageBody = document.querySelector("section.search-box");
+
+    window.addEventListener("scroll", function() {
+      var scrollTop = window.pageYOffset || this.document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-126px";
+        pageBody.style.top = "0px";
+      } else {
+        navbar.style.top = "0px";
+        pageBody.style.top = "126px";
+      }
+    })
+
+  });
 });
